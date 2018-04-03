@@ -1,0 +1,15 @@
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+                 android:drawable="@drawable/ic_rabbit_anim_obj">
+    <target
+        android:name="ear"
+        android:animation="@animator/anim_translatex"/>
+    <target
+        android:name="pigu"
+        android:animation="@animator/anim_rotation"/>
+    <target
+        android:name="right"
+        android:animation="@animator/anim_trimend"/>
+    <target
+        android:name="gradient"
+        android:animation="@animator/anim_path_data"/>
+</animated-vector>
