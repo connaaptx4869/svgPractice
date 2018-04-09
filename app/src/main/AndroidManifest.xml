@@ -18,7 +18,8 @@
         </activity>
         <activity android:name=".MapActivity"/>
         <activity android:name=".SvgSimpleActivity"/>
-        <activity android:name=".SvgAnimActivity"/>
+        <activity android:name=".SvgAnimTestActivity"/>
+        <activity android:name=".SvgAnimStarActivity" />
     </application>
 
 </manifest>
