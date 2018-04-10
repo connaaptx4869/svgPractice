@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+        xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <data />
+    <data/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -12,8 +12,9 @@
 
         <android.support.v7.widget.AppCompatImageView
             android:id="@+id/anim"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:srcCompat="@drawable/ic_collection_anim" />
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:padding="10dp"
+            app:srcCompat="@drawable/ic_collection_anim_uncheck"/>
     </LinearLayout>
 </layout>

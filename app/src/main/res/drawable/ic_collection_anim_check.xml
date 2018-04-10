@@ -1,9 +1,9 @@
 <animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
-    android:drawable="@drawable/ic_collection_uncheck">
+                 android:drawable="@drawable/ic_collection_check">
     <target
         android:name="empty"
-        android:animation="@animator/anim_scale_to1" />
+        android:animation="@animator/anim_scale_to1"/>
     <target
         android:name="solid"
-        android:animation="@animator/anim_scale_to0" />
+        android:animation="@animator/anim_scale_to0"/>
 </animated-vector>
