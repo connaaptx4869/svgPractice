@@ -2,10 +2,7 @@ package com.parker.svgpractice;
 
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
-import android.graphics.drawable.Animatable;
-import android.graphics.drawable.AnimatedVectorDrawable;
 import android.os.Bundle;
-import android.support.graphics.drawable.AnimatedVectorDrawableCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
@@ -28,13 +25,18 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void gotoAnim(View view) {
-        Intent intent = new Intent(MainActivity.this, SvgAnimActivity.class);
+    public void gotoAnimTest(View view) {
+        Intent intent = new Intent(MainActivity.this, SvgAnimTestActivity.class);
         startActivity(intent);
     }
 
     public void gotoSimple(View view) {
         Intent intent = new Intent(MainActivity.this, SvgSimpleActivity.class);
+        startActivity(intent);
+    }
+
+    public void gotoStar(View view) {
+        Intent intent = new Intent(MainActivity.this, SvgAnimStarActivity.class);
         startActivity(intent);
     }
 }
