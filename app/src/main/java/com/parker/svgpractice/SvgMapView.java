@@ -40,6 +40,7 @@ public class SvgMapView extends View {
     //缩放比例
     private float scale = 0f;
     private float mapWidth = 773.0f, mapHeight = 568.0f;
+    private boolean isParsing = true;
 
     public SvgMapView(Context context) {
         this(context, null);
@@ -59,6 +60,7 @@ public class SvgMapView extends View {
         paint = new Paint();
         paint.setAntiAlias(true);
         provinceList = new ArrayList<>();
+        isParsing = true;
         loadThread.start();
     }
 
@@ -73,6 +75,9 @@ public class SvgMapView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
+        if (isParsing) {
+            return;
+        }
         if (provinceList != null) {
             canvas.scale(scale, scale);
             for (Province item : provinceList) {
@@ -107,7 +112,7 @@ public class SvgMapView extends View {
     private Thread loadThread = new Thread() {
         @Override
         public void run() {
-            InputStream inputStream = context.getResources().openRawResource(R.raw.china_svg);
+            InputStream inputStream = context.getResources().openRawResource(R.raw.japan_svg);
             try {
                 //取得 DocumentBuilderFactory 实例
                 DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
@@ -127,6 +132,7 @@ public class SvgMapView extends View {
             } catch (Exception e) {
                 e.printStackTrace();
             }
+            isParsing = false;
         }
     };
     Handler handler = new Handler() {
